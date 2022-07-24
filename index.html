@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@326;400&family=Roboto+Condensed:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+
+<body class="body">
+
+    <div class="container">
+        <form class="form js-form">
+
+            <legend class="form__legend">Kalkulator walut</legend>
+            <label>
+                <span class="form__labelText">Podaj kwotę:</span>
+                <input class="js-form__field--value form__field form__field--value" type="number" min="0"
+                    name="currencyValue" step="any" autofocus>
+            </label>
+            <label>
+                <span class="form__labelText">Wybierz walutę:</span>
+                <select class="form__field js-form__field--currency" name="currency">
+                    <option selected class="form__option js-form__option--EUR">EUR(euro)</option>
+                    <option class="form__option js-form__option--USD">USD(dolar amerykański)</option>
+                    <option class="form__option js-form__option--GBP">GBP(funt brytyjski)</option>
+                </select>
+            </label>
+            <p>
+                <button class= "form__button" type="submit">Przelicz</button>
+                <button class="form__button" type="reset">Wyczyść</button>
+            </p>
+
+            <p>
+                Kwota w PLN: <span class="js-form__span form__span"></span>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>
